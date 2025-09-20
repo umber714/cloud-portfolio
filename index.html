@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Umber — Cloud Engineer Portfolio</title>
+<meta content="Cloud &amp; Security Engineer portfolio showcasing AWS, DevOps, and CyberArk projects by Umber." name="description"/>
+<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%230ea5e9'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='46' fill='url(%23g)'/%3E%3Ctext x='50' y='61' font-size='48' text-anchor='middle' fill='white' font-family='ui-sans-serif,system-ui'%3EU%3C/text%3E%3C/svg%3E" rel="icon"/>
+
+<link href="styles.css" rel="stylesheet"/></head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="brand">
+<div aria-hidden="true" class="logo">U</div>
+<div>Umber <span style="color:var(--muted); font-weight:600">/ Cloud &amp; Security Engineer</span></div>
+</div>
+<div class="nav-links">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#contact">Contact</a>
+<button aria-label="Toggle theme" class="btn" id="theme">🌗 Theme</button>
+</div>
+</nav>
+</div>
+</header>
+<main class="container">
+<!-- HERO -->
+<section class="hero">
+<div class="inner">
+<div>
+<h1 class="headline">Designing resilient clouds. Securing what matters.</h1>
+<p class="subhead">I'm <strong>Umber</strong> — Cloud &amp; Security Engineer focused on <strong>AWS</strong>, <strong>CyberArk</strong>, and <strong>DevOps</strong> automation. I build reliable systems, lock down access, and make dashboards that sing.</p>
+<div class="badge-row">
+<span class="pill">AWS • Serverless • IaC</span>
+<span class="pill">CyberArk L2 • PSM SME</span>
+<span class="pill">SOC • Threat Detection</span>
+<span class="pill">Terraform • Python • Bash</span>
+</div>
+<div class="cta-row">
+<a class="btn cta-primary" href="#projects">View Projects</a>
+<a class="btn" href="#contact">Work with Me</a>
+</div>
+</div>
+</div>
+</section>
+<!-- PROJECTS -->
+<section id="projects">
+<h2 class="section-title">Featured Projects</h2>
+<p class="section-sub">A curated set of hands-on builds. Filter by stack to jump fast.</p>
+<div aria-label="Project filters" class="filters" role="tablist">
+<button class="pill active" data-filter="all" role="tab">All</button>
+<button class="pill" data-filter="aws" role="tab">AWS</button>
+<button class="pill" data-filter="security" role="tab">Security</button>
+<button class="pill" data-filter="serverless" role="tab">Serverless</button>
+<button class="pill" data-filter="networking" role="tab">Networking</button>
+<button class="pill" data-filter="terraform" role="tab">Terraform</button>
+</div>
+<div class="grid cols-3" id="projectGrid">
+<article class="card" data-tags="aws serverless security terraform">
+<h3 class="title">Serverless Image Converter</h3>
+<p class="desc">S3 → Lambda (Sharp) → S3 pipeline with event-driven processing, IAM least-privilege, and CloudFront delivery. Includes CORS hardening.</p>
+<div class="stack">
+<span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">Terraform</span>
+</div>
+<div class="links">
+<a class="link" href="#">Live</a>
+<a class="link" href="#">Source</a>
+<a class="link" href="#">Case Study</a>
+</div>
+</article>
+<article class="card" data-tags="security networking terraform">
+<h3 class="title">CyberArk PAM in a Secure VPC</h3>
+<p class="desc">Reference architecture for Vault, PVWA, and PSM across private subnets with NAT, ALB, WAF, and session recording. Automated with IaC.</p>
+<div class="stack">
+<span class="tag">CyberArk</span><span class="tag">VPC</span><span class="tag">WAF</span><span class="tag">ALB</span><span class="tag">Terraform</span>
+</div>
+<div class="links">
+<a class="link" href="#">Diagram</a>
+<a class="link" href="#">Docs</a>
+</div>
+</article>
+<article class="card" data-tags="security serverless aws">
+<h3 class="title">Automated Email Sender</h3>
+<p class="desc">SES-backed transactional email via API Gateway + Lambda. Signature validation, DLQ, and observability with CloudWatch.</p>
+<div class="stack">
+<span class="tag">API Gateway</span><span class="tag">Lambda</span><span class="tag">SES</span><span class="tag">CloudWatch</span>
+</div>
+<div class="links">
+<a class="link" href="#">Live</a>
+<a class="link" href="#">Source</a>
+</div>
+</article>
+<article class="card" data-tags="networking security">
+<h3 class="title">Tailscale Exit Node Fleet</h3>
+<p class="desc">Multi-region exit nodes with route advertisements, health probes, and auto-recovery scripts on GL.iNet/OpenWrt.</p>
+<div class="stack">
+<span class="tag">Tailscale</span><span class="tag">OpenWrt</span><span class="tag">Bash</span>
+</div>
+<div class="links">
+<a class="link" href="#">Playbook</a>
+</div>
+</article>
+<article class="card" data-tags="aws security serverless">
+<h3 class="title">S3 Static Site + CF + WAF</h3>
+<p class="desc">Hardened static hosting with OAC, versioned deploys, HSTS, and bot control. Blue/green invalidations for safe rollouts.</p>
+<div class="stack">
+<span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">WAF</span>
+</div>
+<div class="links">
+<a class="link" href="#">Live</a>
+<a class="link" href="#">Guide</a>
+</div>
+</article>
+<article class="card" data-tags="terraform aws security">
+<h3 class="title">GuardDuty + Security Hub Baseline</h3>
+<p class="desc">Org-wide enablement with delegated admin, auto-enrollment, and finding export to S3/Lake. All via Terraform.</p>
+<div class="stack">
+<span class="tag">GuardDuty</span><span class="tag">Security Hub</span><span class="tag">Terraform</span>
+</div>
+<div class="links">
+<a class="link" href="#">Module</a>
+</div>
+</article>
+</div>
+</section>
+<!-- SKILLS -->
+<section id="skills">
+<h2 class="section-title">Skills &amp; Tools</h2>
+<p class="section-sub">The toolkit I reach for to build, break (safely), and harden.</p>
+<div class="skills">
+<div class="skill">
+<h4>Cloud</h4>
+<div class="stack">
+<span class="tag">AWS</span><span class="tag">IAM</span><span class="tag">EC2</span><span class="tag">S3</span><span class="tag">CloudFront</span><span class="tag">RDS</span><span class="tag">VPC</span>
+</div>
+</div>
+<div class="skill">
+<h4>Security</h4>
+<div class="stack">
+<span class="tag">CyberArk</span><span class="tag">PSM</span><span class="tag">WAF</span><span class="tag">GuardDuty</span><span class="tag">Security Hub</span>
+</div>
+</div>
+<div class="skill">
+<h4>DevOps</h4>
+<div class="stack">
+<span class="tag">Terraform</span><span class="tag">GitHub Actions</span><span class="tag">Docker</span><span class="tag">Bash</span><span class="tag">Python</span>
+</div>
+</div>
+<div class="skill">
+<h4>Networking</h4>
+<div class="stack">
+<span class="tag">Tailscale</span><span class="tag">WireGuard</span><span class="tag">OpenWrt</span><span class="tag">DNS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- EXPERIENCE (updated) -->
+<section id="experience">
+<h2 class="section-title">Experience</h2>
+<p class="section-sub">Key roles and impact across cloud, security, and infrastructure engineering.</p>
+<div class="timeline">
+<div class="tl-item">
+<h3 class="tl-title">Privileged Cloud Engineer — CyberArk</h3>
+<div class="tl-meta">03/2024 – Present · Remote</div>
+<p class="desc">
+            Built and operated HA CyberArk PAM (CPM/PSM/PVWA/Vault/CM) in AWS/Azure; integrated Splunk &amp; QRadar for live session monitoring; automated onboarding via REST + PowerShell (~30% efficiency gain); designed DR/failover targeting 99.99% uptime; tightened network controls (firewalls, VPNs, tunnels) and aligned PAM to least-privilege/zero-trust with ISO 27001/CIS.
+          </p>
+</div>
+<div class="tl-item">
+<h3 class="tl-title">Freelance Web Developer — Taza Negra</h3>
+<div class="tl-meta">05/2023 – 05/2025 · Remote</div>
+<p class="desc">
+            Delivered a Next.js storefront with Stripe + Skydrop logistics, subscription checkout, and a non-technical admin dashboard; launched under budget in 3 weeks, enabling subscription revenue and smoother ops.
+          </p>
+</div>
+<div class="tl-item">
+<h3 class="tl-title">Implementation Specialist / System Engineer — Yardi Systems</h3>
+<div class="tl-meta">10/2022 – 02/2024 · Santa Ana, CA</div>
+<p class="desc">
+            Led Voyager 8 deployments with Amazon Aurora; enforced Azure tenant isolation &amp; RBAC; designed HA across DB/app layers; investigated performance using targeted SQL diagnostics to resolve root causes.
+          </p>
+</div>
+<div class="tl-item">
+<h3 class="tl-title">Technical Support Specialist — SkyBell Technologies</h3>
+<div class="tl-meta">06/2020 – 10/2022 · Irvine, CA</div>
+<p class="desc">
+            Administered Microsoft 365 (Exchange/SharePoint/Teams) and Azure AD; managed hybrid AD and VDI rollout; handled patching/endpoint controls to secure remote-first operations.
+          </p>
+</div>
+</div>
+</section>
+<!-- CERTIFICATIONS -->
+<section id="certs">
+<h2 class="section-title">Certifications</h2>
+<div class="grid cols-3">
+<div class="card"><strong>CompTIA</strong><span class="tag">Network+</span></div>
+<div class="card"><strong>CyberArk</strong><span class="tag">Defender • L2 / PSM SME</span></div>
+<div class="card"><strong>AWS</strong><span class="tag">Solutions Architect (in progress)</span></div>
+</div>
+</section>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="card">
+<h3 style="margin:0 0 8px">Let's build something solid.</h3>
+<p class="desc">Got a project, an interview, or a thorny incident? Drop a line — I reply fast.</p>
+<form action="ACTION_URL_FROM_YOUR_LIVE_PORTFOLIO" method="POST">
+<input name="name" placeholder="Your name" required=""/>
+<input name="email" placeholder="Your email" required="" type="email"/>
+<textarea name="message" placeholder="Tell me briefly what you need" required=""></textarea>
+<button class="btn cta-primary" type="submit">Send</button>
+</form>
+</div>
+<div class="card">
+<h4 style="margin:0 0 8px">Signal over noise</h4>
+<p class="desc">Prefer direct links? Here you go.</p>
+<div class="links">
+<a class="link" href="#">LinkedIn</a>
+<a class="link" href="#">GitHub</a>
+<a class="link" href="#">Resume (PDF)</a>
+</div>
+<div style="margin-top:14px"><span class="tag">hello@umber.cloud</span></div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container">
+<div style="display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;">
+<div>© <span id="y"></span> Umber. Built with plain HTML/CSS — deployed on AWS S3 + CloudFront.</div>
+<div style="opacity:.8">"Strong clouds. Tighter locks."</div>
+</div>
+</div>
+</footer>
+<script>
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Theme toggle (persist)
+    const themeBtn = document.getElementById('theme');
+    const key = 'theme:prefer-dark';
+    const setTheme = (dark) => {
+      if (dark) document.documentElement.style.colorScheme = 'dark';
+      else document.documentElement.style.colorScheme = 'light';
+      localStorage.setItem(key, dark ? '1' : '0');
+    };
+    setTheme(localStorage.getItem(key) !== '0');
+    themeBtn.addEventListener('click', () => setTheme(localStorage.getItem(key) === '0'));
+
+    // Project filtering
+    const grid = document.getElementById('projectGrid');
+    const filters = document.querySelectorAll('.filters .pill');
+    filters.forEach(b => b.addEventListener('click', () => {
+      filters.forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      const f = b.dataset.filter;
+      [...grid.children].forEach(card => {
+        const show = f === 'all' || card.dataset.tags.includes(f);
+        card.style.display = show ? '' : 'none';
+      });
+    }));
+  </script>
+</body>
+</html>
